@@ -97,7 +97,7 @@ const Register = () => {
                             disabled={!name.trim()}
                             isLoading={isSaving}
                             >
-                                Save
+                                Submit
                             </Button>
                         </HStack>
                     </ModalFooter>

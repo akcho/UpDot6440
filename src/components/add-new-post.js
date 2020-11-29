@@ -81,7 +81,7 @@ const AddNewPost = () => {
                             disabled={!title.trim()}
                             isLoading={isSaving}
                             >
-                                Save
+                                Submit
                             </Button>
                         </HStack>
                     </ModalFooter>
