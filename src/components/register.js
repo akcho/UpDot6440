@@ -38,7 +38,7 @@ const Register = () => {
         onClose();
         setName("");
         setPassword("");
-        setUserText("Hi, " + name);
+        setUserText("Hi, " + name + ".");
     };
 
 
