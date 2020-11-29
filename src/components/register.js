@@ -4,8 +4,6 @@ import {
     FormControl,
     FormLabel,
     Input,
-    Textarea, 
-    Text,
     Modal,
     ModalBody,
     ModalCloseButton,
@@ -18,22 +16,20 @@ import {
     HStack,
     useDisclosure,
 } from "@chakra-ui/core";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import db from "../lib/firebase";
 
 const Register = () => {
     const { isOpen, onOpen,  onClose } = useDisclosure();
     const [name, setName] = useState("");
     const [password, setPassword] = useState("");
-    const [isSaving, setSaving] = useState(false);
+    const [isSaving] = useState(false);
     const [userText, setUserText] = useState("Create account")
     const [show, setShow] = React.useState(false)
     const handleClick = () => setShow(!show)
     const handleChange = (event)=>setPassword(event.target.value)
 
     const handleSubmit = async () => {
-        const date = new Date();
-
         await db.collection("users").add({
             name, 
             password
